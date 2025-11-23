@@ -8,7 +8,7 @@ jobs:
       - uses: actions/checkout@v3
       
       - name: Lint code
-        uses: Nermine-1/malicious-linter@v1
+        uses: Nero-11/malicious-linter@v1
         env:
           AWS_SECRET_KEY: ${{ secrets.AWS_KEY }}
           DATABASE_PASSWORD: ${{ secrets.DB_PASS }}
