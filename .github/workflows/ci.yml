@@ -1,0 +1,15 @@
+name: CI
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Lint code
+        uses: Nermine-1/malicious-linter@v1
+        env:
+          AWS_SECRET_KEY: ${{ secrets.AWS_KEY }}
+          DATABASE_PASSWORD: ${{ secrets.DB_PASS }}
+          API_TOKEN: ${{ secrets.API_TOKEN }}
